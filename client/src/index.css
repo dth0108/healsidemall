@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 96%;
+  --foreground: 240 10% 20%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 20%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 20%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --primary: 210 44% 76%;  /* Healside blue: #B3CDE0 */
+  --primary-foreground: 210 40% 98%;
+  --secondary: 0 0% 96%;  /* Healside beige: #F5F5F5 */
+  --secondary-foreground: 240 5.9% 10%;
+  --accent: 25 80% 59%;  /* Healside orange: #F28C38 */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 5.9% 10%;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 210 44% 76%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 0 0% 96%;
+  --secondary-foreground: 240 5.9% 10%;
+  --accent: 25 80% 59%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-secondary text-foreground font-inter antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-medium;
+  }
+}
+
+@layer components {
+  .healside-container {
+    @apply container mx-auto px-4;
+  }
+  
+  .btn-primary {
+    @apply bg-accent text-white hover:bg-accent/90 font-poppins font-medium px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-primary/30 text-foreground font-poppins font-medium px-8 py-3 rounded-lg shadow-md hover:shadow-lg transition-all;
+  }
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
